@@ -5,9 +5,7 @@
 
 using namespace std;
 
-vector<int> solution(vector<int> &a, int k) {
-    // write your code in C++14 (g++ 6.2.0)
-    
+vector<int> solution(vector<int> &a, int k) {    
     //null checks, sanity checks
     if(k < 0 || a.size() == 0) {
         return vector<int> ();
@@ -15,13 +13,11 @@ vector<int> solution(vector<int> &a, int k) {
     if(k == 0 || a.size() == 1) {
         return a;
     }
-    
     //initialize temp and make it the size of a
     vector<int> temp;
     temp.resize(a.size());
     
     for(int i = a.size()-1; i >= 0; i--) {
-        
         //if the # of rotation > size
         if(k > (int) a.size()) {
             if(i+k >= (int) a.size()) {
