@@ -31,7 +31,6 @@ int BinaryGap (int n) {
 
 	for(int j = i+1; j <= sizeof(n)*8; j++) {
 		cur++;
-
 		//current bit set then compare difference of cur-prev-1 with prev number of maximum zeros
 		if ((n & setBit) == setBit) { 
 			if(max0 < (cur-prev-1)) {
